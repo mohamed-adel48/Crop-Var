@@ -1,0 +1,122 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model admin {
+  id       Int        @unique @default(autoincrement())
+  username String     @unique
+  password String
+  role     admin_role @default(User)
+  user     user[]
+  location location[]
+}
+
+model user {
+  id           Int          @unique @default(autoincrement())
+  name         String
+  nationalId   String       @unique
+  farmerCard   String
+  phoneNumber  String
+  adminId      Int?
+  createdBy    admin?       @relation(fields: [adminId], references: [id], onDelete: SetNull)
+  locations    location[]
+  assumption   assumption[]
+  warningCount Int?         @default(0)
+  status       user_status  @default(Available)
+  photo        String       @default("https://static.vecteezy.com/system/resources/previews/024/983/914/original/simple-user-default-icon-free-png.png")
+}
+
+model location {
+  id         Int          @unique @default(autoincrement())
+  farmerId   Int?
+  farmer     user?        @relation(fields: [farmerId], references: [id], onDelete: Cascade)
+  latlongs   latlong[]
+  createdBy  admin?       @relation(fields: [adminId], references: [id], onDelete: SetNull)
+  adminId    Int?
+  assumption assumption[]
+}
+
+model latlong {
+  id         Int       @unique @default(autoincrement())
+  lang       Decimal
+  lat        Decimal
+  locationId Int?
+  location   location? @relation(fields: [locationId], references: [id], onDelete: Cascade)
+}
+
+model plant {
+  id                   Int              @unique @default(autoincrement())
+  photo                String           @default("https://png.pngtree.com/png-clipart/20230113/ourmid/pngtree-red-fresh-tomato-with-green-leaf-png-image_6561484.png")
+  name                 String
+  fertlizerConsumption Decimal
+  detectMonth          Int?
+  category             plant_categories @default(Vegetable)
+  assumption_ai        assumption[]     @relation("ai")
+  assumption_farmer    assumption[]     @relation("farmer")
+}
+
+model assumption {
+  id                Int                 @unique @default(autoincrement())
+  farmer            user?               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  location          location            @relation(fields: [locationId], references: [id], onDelete: Cascade)
+  farmerAssumption  plant?              @relation("farmer", fields: [plantId_farmer], references: [id], onDelete: Cascade)
+  plantId_farmer    Int?
+  plantId_ai        Int?
+  status            assumption_status   @default(Pending)
+  ai_Assumption     plant?              @relation("ai", fields: [plantId_ai], references: [id], onDelete: Cascade)
+  userId            Int?
+  locationId        Int
+  startDate         DateTime
+  assumption_appeal assumption_appeal[]
+}
+
+model assumption_appeal {
+  id            Int                      @unique @default(autoincrement())
+  assumption    assumption?              @relation(fields: [assumptionId], references: [id], onDelete: Cascade)
+  assumptionId  Int?
+  description   String?
+  appeal_status assumption_appeal_status @default(Pending)
+}
+
+enum user_status {
+  Banned
+  Available
+}
+
+enum assumption_status {
+  Pending
+  Right
+  Wrong
+}
+
+enum assumption_appeal_status {
+  Pending
+  accepted
+  denied
+}
+
+enum plant_categories {
+  Vegetable
+  Fruit
+  Herb
+  Grain
+  Legume
+  Flower
+  Tree
+}
+
+enum admin_role {
+  Admin
+  User
+}
