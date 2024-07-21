@@ -1,0 +1,6 @@
+
+@media  (max-width: 1366px)  {
+    .changeToColumn{
+        flex-direction: column;
+    }
+}
