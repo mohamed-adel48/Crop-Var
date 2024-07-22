@@ -10,7 +10,7 @@ This dataset focuses on the classification of agricultural and non-agricultural 
 We are grateful to the **National Authority for Remote Sensing and Space Sciences** [NARSS](https://github.com/NARSS) for providing us with the dataset.
 ## Website
   ### Front-End
-  The frontend of the project is located in the frontend folder. It is built using React and Tailwind CSS to provide a seamless and interactive user experience. This allows stakeholders to easily explore the classified land cover data.
+  The front end of the project is located in the `Front-End` folder. It is built using React and Tailwind CSS to provide a seamless and interactive user experience. This allows stakeholders to easily explore the classified land cover data.
   
   The `Screens` folder contains visual representations of the website's user interface. These screenshots provide an overview of the different screens and features of the website, showcasing the design and layout. You can view the folder [here](./Screens).
   
