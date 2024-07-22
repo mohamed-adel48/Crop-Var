@@ -16,8 +16,8 @@ We are grateful to the **National Authority for Remote Sensing and Space Science
   
   ### Back-End
   The backend is split into two separate files within the backend folder:
-    * Node.js: Located in the node_backend file, used for query and creating dashboard collections.
-    * Django: Located in the django_backend file, handles image preprocessing, loading the model, and crop classification.
+    - Node.js: Located in the node_backend file, used for query and creating dashboard collections.
+    - Django: Located in the django_backend file, handles image preprocessing, loading the model, and crop classification.
   ### Database
   We use **MySQL** to store and manage data such as classification results and user information and **Prisma ORM** to interacts with MySQL.
   
