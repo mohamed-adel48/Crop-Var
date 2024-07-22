@@ -15,7 +15,7 @@ We are grateful to the **National Authority for Remote Sensing and Space Science
   The `Screens` folder contains visual representations of the website's user interface. These screenshots provide an overview of the different screens and features of the website, showcasing the design and layout. You can view the folder [here](./Screens).
   
   ### Back-End
-  The backend is split into two separate files within the backend folder:
+  The backend is split into two separate files:
   - Node.js: Located in the `Nodejs-Backend` file, used for query and creating dashboard collections.
   - Django: Located in the `Django-Backend` file, handles image preprocessing, loading the model, and crop classification.
   ### Database
