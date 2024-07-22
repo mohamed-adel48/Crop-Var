@@ -12,7 +12,7 @@ We are grateful to the **National Authority for Remote Sensing and Space Science
   ### Front-End
   Built using **React** and **Tailwind CSS**, the front end provides a seamless and interactive user experience, allowing stakeholders to explore the classified land cover data easily.
   ### Back-End
-  Responsible for communication between the model and the client-side server, the backend consists of two web application frameworks: **Node.js** and   **Django**. Node.js is used for query and creating dashboard collections, while Django handles image preprocessing, loading the model, and crop   classification.
+  The backend consists of two web application frameworks: **Node.js** and   **Django**. Node.js is used for query and creating dashboard collections, while Django handles image preprocessing, loading the model, and crop classification.
   ### Database
   We use **MySQL** to store and manage data such as classification results and user information and **Prisma ORM** to interacts with MySQL,
 
