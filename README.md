@@ -1,5 +1,5 @@
 # Crop-Mapping (Graduation Project)
-![Project Logo](Screens/CropVarlogo.png)
+![Project Logo](Screens/Crop-Var-V2logo.png)
 ## Overview
 This project focuses on the classification of land cover and agricultural crops in the Al-Faiyum region of Egypt using Sentinel-2A satellite imagery and deep learning techniques. By leveraging a Convolutional Neural Network (CNN) architecture, we achieved an impressive 95% accuracy across seven classes, including clover, wheat, and urban areas. This work provides valuable insights for resource management and agricultural planning.
 
