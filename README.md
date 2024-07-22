@@ -10,6 +10,12 @@ This dataset focuses on the classification of agricultural and non-agricultural 
 We are grateful to the **National Authority for Remote Sensing and Space Sciences** [NARSS](https://github.com/NARSS) for providing us with the dataset.
 ## Website
   ### Front-End
+
+  ### Back-End
+  Responsible for communication between the model and the client-side server, the backend consists of two web application frameworks: **Node.js** and **Django**. Node.js is used for query and creating dashboard collections, while Django handles image preprocessing, loading the model, and crop classification.
+
+
+  
 ## Team 
 - [Mahmoud Sanad](https://github.com/Mahmoud-Sanad)
 - [Menna Tarek](https://github.com/Menna-Tarek21)
