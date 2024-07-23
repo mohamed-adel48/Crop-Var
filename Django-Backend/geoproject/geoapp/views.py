@@ -90,7 +90,7 @@ class CropClassificationView(APIView):
                     img_tensor = torch.tensor(img_data_flattened, dtype=torch.float32)
 
                     # Load the model
-                    model_path = os.path.join(os.path.dirname(sys.argv[0]), 'fullelfull.pth')
+                    model_path = os.path.join(os.path.dirname(sys.argv[0]), 'model_weights.pth')
                     model = torch.load(model_path)
                     model.eval()  # Set the model to evaluation mode
 
