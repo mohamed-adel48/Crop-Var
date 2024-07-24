@@ -26,7 +26,43 @@ The code is focused on classifying each pixel in a satellite image based on its 
   - Django: Located in the `Django-Backend` file, handles image preprocessing, loading the model, and crop classification.
   ### Database
   We use **MySQL** to store and manage data such as classification results and user information and **Prisma ORM** to interact with MySQL.
-  # Crop-Var (Graduation Project)
+  
+## Installation and Running Instructions
+
+  ### Django Backend
+
+    
+    cd path/to/Django-Backend
+
+    python -m venv venv
+
+    venv\Scripts\activate
+
+    source venv/bin/activate
+
+    pip install -r requirements.txt
+
+    python manage.py runserver
+
+
+  ### NodeJS Backend
+
+    cd path/to/Nodejs-Backend
+
+    npm install
+
+    npm start
+
+  ### ReactJS Front-End
+
+    cd path/to/Front-End
+
+    npm install
+
+    npm start
+
+    
+Make sure to replace `path/to/Django-Backend`, `path/to/Nodejs-Backend`, and `path/to/Front-End` with the actual paths to your project directories.
 
 
   
