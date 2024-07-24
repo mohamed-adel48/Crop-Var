@@ -44,7 +44,7 @@ The code focuses on pixel-based image classification, where each pixel in the sa
     python manage.py runserver
 
 
-    ### NodeJS Backend
+  ### NodeJS Backend
 
     cd path/to/Nodejs-Backend
 
@@ -52,7 +52,7 @@ The code focuses on pixel-based image classification, where each pixel in the sa
 
     npm start
 
-    ### ReactJS Front-End
+  ### ReactJS Front-End
 
     cd path/to/Front-End
 
