@@ -63,12 +63,8 @@ The code is focused on classifying each pixel in a satellite image based on its 
 
     npm start
 
-
     
 Make sure to replace `path/to/Django-Backend`, `path/to/Nodejs-Backend`, and `path/to/Front-End` with the actual paths to your project directories.
-
-
-
 
 
 
