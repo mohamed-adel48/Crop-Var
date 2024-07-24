@@ -1,6 +1,8 @@
 # Crop-Var (Graduation Project)
 ## Overview
 This project focuses on the classification of land cover and agricultural crops in the Al-Faiyum region of Egypt using Sentinel-2A satellite imagery and deep learning techniques. By leveraging a Convolutional Neural Network (CNN) architecture, we achieved an impressive 95% accuracy across seven classes, including clover, wheat, and urban areas. This work provides valuable insights for resource management and agricultural planning.
+- Helps in monitoring and managing crop health and distribution.
+- Assists in effective resource allocation and planning for agricultural activities.
 
 In addition, we developed a user-friendly website to visualize and interact with our classification results. The website enhances accessibility for stakeholders and decision-makers, allowing them to explore the classified land cover data seamlessly.
 
@@ -10,7 +12,8 @@ This dataset focuses on the classification of agricultural and non-agricultural 
 We are grateful to the **National Authority for Remote Sensing and Space Sciences** [NARSS](https://github.com/NARSS) for providing us with the dataset.
 
 ## Pixel-Based Deep Learning Model 
-The code focuses on pixel-based image classification, where each pixel in the satellite image is classified individually based on its spectral data.
+The code is focused on classifying each pixel in a satellite image based on its spectral data. This pixel-based approach allows for detailed and precise classification of different land cover types, including various crops. By analyzing the spectral information of each pixel, the model can accurately identify and map the distribution of crops within an image.
+
 ## Website
   ### Front-End
   The front end of the project is located in the `Front-End` folder or from [here](./Front-End). It is built using React and Tailwind CSS to provide a seamless and interactive user experience. This allows stakeholders to easily explore the classified land cover data.
