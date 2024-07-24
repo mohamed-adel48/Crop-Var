@@ -1,5 +1,4 @@
 # Crop-Var (Graduation Project)
-![Logo](Logo/CropVar.png)
 ## Overview
 This project focuses on the classification of land cover and agricultural crops in the Al-Faiyum region of Egypt using Sentinel-2A satellite imagery and deep learning techniques. By leveraging a Convolutional Neural Network (CNN) architecture, we achieved an impressive 95% accuracy across seven classes, including clover, wheat, and urban areas. This work provides valuable insights for resource management and agricultural planning.
 - Helps in monitoring and managing crop health and distribution.
@@ -28,45 +27,6 @@ The code is focused on classifying each pixel in a satellite image based on its 
   ### Database
   We use **MySQL** to store and manage data such as classification results and user information and **Prisma ORM** to interact with MySQL.
   # Crop-Var (Graduation Project)
-
-## Installation and Running Instructions
-
-  ### Django Backend
-
-    
-    cd path/to/Django-Backend
-
-    python -m venv venv
-
-    venv\Scripts\activate
-
-    source venv/bin/activate
-
-    pip install -r requirements.txt
-
-    python manage.py runserver
-
-
-  ### NodeJS Backend
-
-    cd path/to/Nodejs-Backend
-
-    npm install
-
-    npm start
-
-  ### ReactJS Front-End
-
-    cd path/to/Front-End
-
-    npm install
-
-    npm start
-
-    
-Make sure to replace `path/to/Django-Backend`, `path/to/Nodejs-Backend`, and `path/to/Front-End` with the actual paths to your project directories.
-
-
 
 
   
